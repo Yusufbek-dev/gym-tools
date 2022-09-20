@@ -1,0 +1,243 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+
+footer {
+  padding: 80px 0 20px;
+  background-color: #1A1A25;
+  @include mobile {
+    padding: 40px 0 15px;
+  }
+}
+
+.footer {
+  padding-bottom: 27px;
+  justify-content: space-between;
+  border-bottom: 1px solid $secondary-color;
+  display: flex;
+  column-gap: 80px;
+  .footer2 {
+    width: 60%;
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+    @include mobile {
+      justify-content: center;
+      // align-items: center;
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    &-item {
+      color: #858FA4;
+      p {
+        color: #fff;
+        margin-bottom: 30px;
+      }
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+      width: 45%;
+    }
+  }
+  &__main {
+width: 25%;
+    form {
+      margin-bottom: 45px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px;
+        background: rgba(133, 143, 164, 0.15);
+        border-radius: 5px;
+        input[type="email"] {
+          border: none;
+          background-color: transparent;
+          columns: #fff;
+          &::placeholder {
+            color: #858FA4;
+          }
+        }
+        input[type="submit"] {
+          color: #fff;
+          width: 20px;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+    .footer-calls {
+      display: flex;
+      margin-bottom: 20px;
+      flex-direction: column;
+      row-gap: 10px;
+      p {
+        color: #858FA4;
+      }
+      &>a {
+        font-size: .9rem;
+        color: #fff;
+      }
+    }
+    .footer-email {
+      display: flex;
+      margin-bottom: 13px;
+      flex-direction: column;
+      row-gap: 8px;
+      a {
+        color:  #858FA4;
+        &:nth-child(2) {
+          color: #fff;
+        }
+      }
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      a {
+        font-size: .9rem;
+        color: #4B7EE8;
+      }
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.footer-md {
+  padding: 50px 0;
+  display: none;
+  justify-content: space-between;
+  p, a {
+    font-size: .8rem!important;
+  }
+  form {
+    margin-bottom: 45px;
+    &>a {
+      color:#858FA4;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px;
+      background: rgba(133, 143, 164, 0.15);
+      border-radius: 5px;
+      input[type="email"] {
+        border: none;
+        background-color: transparent;
+        columns: #fff;
+        &::placeholder {
+          color: #858FA4;
+        }
+      }
+      input[type="submit"] {
+        color: #fff;
+        width: 20px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+  .footer-calls {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    row-gap: 10px;
+    p {
+      color: #858FA4;
+    }
+    &>a {
+      font-size: .9rem;
+      color: #fff;
+    }
+  }
+  .footer-email {
+    display: flex;
+    margin-bottom: 13px;
+    flex-direction: column;
+    row-gap: 8px;
+    a {
+      color:  #858FA4;
+      &:nth-child(2) {
+        color: #fff;
+      }
+    }
+  }
+  .footer-mb-btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    a {
+      color: #858FA4;
+    }
+  }
+  @include tablet {
+    display: flex;
+  }
+  @include mobile {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+.footer-bt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .fb-logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    p {
+      color: #858FA4;
+    }
+  }
+  .socials {
+    display: flex;
+    column-gap: 10px;
+    color: #858FA4;
+  }
+  .fb-btns {
+    display: flex;
+    column-gap: 16px;
+    a {
+      padding: 4px 6px;
+      background-color: #384255;
+      color: #fff;
+      cursor: pointer;
+      &:nth-child(2) {
+      background-color: #384255;
+        border: 1px solid #384255;
+        color: #858FA4;
+      }
+
+    }
+  }
+  .carts {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+  }
+  @include tablet {
+    .fb-btns {
+      display: none;
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+  }
+}
